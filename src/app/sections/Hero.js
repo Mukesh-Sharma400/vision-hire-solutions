@@ -5,11 +5,11 @@ import styled from "styled-components";
 export default function Hero() {
   return (
     <DisplayWrapper>
-      <Heading>Find jobs in India</Heading>
+      <Heading>Explore Jobs Across India</Heading>
       <Description>
-        Discover job opportunities and career advice tailored to help you excel.
-        Empowering professionals to achieve their goals with Vision Hire
-        Solutions.
+        Unlock exciting job opportunities and expert career guidance designed to
+        help you thrive. At Vision Hire Solutions, we empower professionals to
+        reach new heights in their career journey.
       </Description>
     </DisplayWrapper>
   );
