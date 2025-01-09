@@ -54,9 +54,6 @@ const Heading = styled.h1`
   @media (max-width: 768px) {
     font-size: 40px;
   }
-  @media (max-width: 550px) {
-    font-size: 30px;
-  }
 `;
 
 const Description = styled.p`
@@ -65,8 +62,5 @@ const Description = styled.p`
 
   @media (max-width: 768px) {
     font-size: 18px;
-  }
-  @media (max-width: 550px) {
-    font-size: 16px;
   }
 `;
