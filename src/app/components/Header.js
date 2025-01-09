@@ -33,17 +33,17 @@ const DisplayWrapper = styled.div`
 
 const Logo = styled(Image)`
   width: auto;
-  height: 80px;
+  height: 60px;
 
   @media (max-width: 375px) {
-    height: 70px;
+    height: 50px;
   }
 `;
 
 const Routes = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 
   @media (max-width: 768px) {
     display: none;
@@ -51,7 +51,7 @@ const Routes = styled.div`
 `;
 
 const Route = styled(Link)`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 
   &:hover {
@@ -60,8 +60,8 @@ const Route = styled(Link)`
 `;
 
 const SearchBtn = styled.button`
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,14 +81,14 @@ const Hamburger = styled.button`
 
   @media (max-width: 768px) {
     display: initial;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     background-color: black;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 50%;
     cursor: pointer;
 
@@ -97,7 +97,7 @@ const Hamburger = styled.button`
     }
   }
   @media (max-width: 375px) {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 `;

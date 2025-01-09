@@ -43,29 +43,29 @@ const DisplayWrapper = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 900;
   margin-top: 100px;
 
   @media (max-width: 1024px) {
-    font-size: 60px;
-  }
-  @media (max-width: 768px) {
     font-size: 50px;
   }
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     font-size: 40px;
+  }
+  @media (max-width: 550px) {
+    font-size: 30px;
   }
 `;
 
 const Description = styled.p`
   max-width: 900px;
-  font-size: 25px;
+  font-size: 22px;
 
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @media (max-width: 550px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
