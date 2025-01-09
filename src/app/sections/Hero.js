@@ -7,8 +7,9 @@ export default function Hero() {
     <DisplayWrapper>
       <Heading>Find jobs in India</Heading>
       <Description>
-        When you’re searching for a job or a new career opportunity, there are a
-        few things you can do to get the most out of your search
+        Discover job opportunities and career advice tailored to help you excel.
+        Empowering professionals to achieve their goals with Vision Hire
+        Solutions.
       </Description>
     </DisplayWrapper>
   );
