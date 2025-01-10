@@ -16,7 +16,6 @@ export default function SearchBox() {
 
 const DisplayWrapper = styled.div`
   width: 70%;
-  min-width: 450px;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -31,6 +30,10 @@ const DisplayWrapper = styled.div`
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
   }
 `;
 
