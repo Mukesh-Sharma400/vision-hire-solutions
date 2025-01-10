@@ -76,7 +76,7 @@ const DisplayWrapper = styled.div`
   background-image: url("/assets/gradient-background.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 50px;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
