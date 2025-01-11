@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect, useState } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 
@@ -12,6 +14,10 @@ export default function StyledComponentsRegistry({ children }) {
     styledComponentsStyleSheet.instance.clearTag();
     return <>{styles}</>;
   });
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   if (typeof window !== "undefined") return <>{children}</>;
 

@@ -81,7 +81,7 @@ const DisplayWrapper = styled.div`
 const Heading = styled.h1`
   font-size: 60px;
   font-weight: 900;
-  margin-top: 80px;
+  margin-top: 80px !important;
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 

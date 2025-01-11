@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
 
@@ -14,6 +15,15 @@ export default function Header() {
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact Us" },
   ];
+
+  useEffect(() => {
+    const tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    const tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
+      return new window.bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }, []);
 
   return (
     <DisplayWrapper>
@@ -34,7 +44,11 @@ export default function Header() {
             {route.label}
           </Route>
         ))}
-        <SearchBtn>
+        <SearchBtn
+          data-bs-toggle="tooltip"
+          data-bs-title="Search"
+          data-bs-custom-class="custom-tooltip"
+        >
           <i className="bi bi-search"></i>
         </SearchBtn>
       </Routes>
@@ -106,6 +120,7 @@ const SearchBtn = styled.button`
 
   &:hover {
     background-color: #6598f3;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 

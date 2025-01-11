@@ -51,10 +51,14 @@ const LeftSide = styled.div`
 const Heading = styled.h3`
   font-size: 35px;
   font-weight: 700;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 `;
 
 const Description = styled.p`
   font-size: 16px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   @media (max-width: 500px) {
     font-size: 15px;
