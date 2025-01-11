@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function SearchBox() {
   return (
-    <DisplayWrapper>
+    <DisplayWrapper data-aos="zoom-in-up">
       <SearchIcon>
         <i className="bi bi-search"></i>
       </SearchIcon>
@@ -30,6 +30,7 @@ const DisplayWrapper = styled.div`
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow 0.3s ease-in-out !important;
   }
 
   @media (max-width: 450px) {

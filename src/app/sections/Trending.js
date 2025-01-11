@@ -38,7 +38,9 @@ export default function Trending() {
       </LeftSide>
       <RightSide>
         {jobs.map((job, index) => (
-          <Job key={index}>{job}</Job>
+          <Job key={index} data-aos="fade-up">
+            {job}
+          </Job>
         ))}
       </RightSide>
     </DisplayWrapper>
@@ -119,6 +121,8 @@ const Job = styled.p`
   &:hover {
     background-color: #f5f5fa;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.3s ease-in-out !important;
+    transition: box-shadow 0.3s ease-in-out !important;
   }
 
   @media (max-width: 500px) {

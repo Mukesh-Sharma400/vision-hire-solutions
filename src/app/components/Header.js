@@ -34,12 +34,12 @@ export default function Header() {
         {routes.map((route, index) => (
           <Route
             key={index}
+            href={route.path}
             className={` ${
               pathname === route.path || pathname.startsWith(route.path + "/")
                 ? "active"
                 : ""
             }`}
-            href={route.path}
           >
             {route.label}
           </Route>

@@ -33,13 +33,13 @@ export default function Members() {
     <DisplayWrapper>
       <HeadingWrapper>
         <Heading>Team members</Heading>
-        <MeetTeamBtn>
+        <MeetTeamBtn data-aos="fade-right">
           <i className="bi bi-three-dots"></i> <span>Meet our team</span>
         </MeetTeamBtn>
       </HeadingWrapper>
       <MembersWrapper>
         {members.map((member, index) => (
-          <MemberWrapper key={index}>
+          <MemberWrapper key={index} data-aos="fade-up">
             <MemberImage src={member.image} alt={member.name} quality={100} />
             <MemberName>{member.name}</MemberName>
             <MemberDescription>
@@ -89,6 +89,8 @@ const MeetTeamBtn = styled.button`
   &:hover {
     background-color: rgba(230, 230, 240);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow 0.3s ease-in-out !important;
+    transition: background-color 0.3s ease-in-out !important;
   }
 
   @media (max-width: 500px) {
@@ -126,6 +128,7 @@ const MemberWrapper = styled.div`
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow 0.3s ease-in-out !important;
   }
 `;
 

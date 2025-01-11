@@ -23,8 +23,8 @@ export default function Hero() {
   ];
   return (
     <DisplayWrapper>
-      <Heading>Explore Jobs Across India</Heading>
-      <Description>
+      <Heading data-aos="fade-up">Explore Jobs Across India</Heading>
+      <Description data-aos="fade-up" data-aos-delay="100">
         Unlock exciting job opportunities and expert career guidance designed to
         help you thrive. At Vision Hire Solutions, we empower professionals to
         reach new heights in their career journey.

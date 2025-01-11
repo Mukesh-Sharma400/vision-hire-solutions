@@ -31,13 +31,13 @@ export default function Jobs() {
     <DisplayWrapper>
       <HeadingWrapper>
         <Heading>Trending jobs</Heading>
-        <AllJobsBtn>
+        <AllJobsBtn data-aos="fade-right">
           <i className="bi bi-three-dots"></i> <span>See all jobs</span>
         </AllJobsBtn>
       </HeadingWrapper>
       <JobsWrapper>
         {jobs.map((job, index) => (
-          <JobWrapper key={index}>
+          <JobWrapper key={index} data-aos="fade-up">
             <JobIcon>
               <i className={job.icon}></i>
             </JobIcon>
@@ -94,6 +94,8 @@ const AllJobsBtn = styled.button`
   &:hover {
     background-color: rgba(230, 230, 240);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow 0.3s ease-in-out !important;
+    transition: background-color 0.3s ease-in-out !important;
   }
 
   @media (max-width: 500px) {
@@ -131,6 +133,7 @@ const JobWrapper = styled.div`
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow 0.3s ease-in-out !important;
   }
 `;
 
