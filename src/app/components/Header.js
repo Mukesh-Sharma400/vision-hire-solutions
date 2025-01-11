@@ -56,7 +56,11 @@ export default function Header() {
           </SearchBtn>
         </Routes>
         <Hamburger onClick={handleMenu}>
-          <i className="bi bi-list"></i>
+          {menuOpened ? (
+            <i className="bi bi-caret-right-fill"></i>
+          ) : (
+            <i className="bi bi-list"></i>
+          )}
         </Hamburger>
       </DisplayWrapper>
       <MenuDropdown menuOpened={menuOpened} setMenuOpened={setMenuOpened} />

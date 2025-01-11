@@ -60,8 +60,6 @@ export const MenuDropdown = ({ menuOpened, setMenuOpened }) => {
     };
   }, []);
 
-  console.log(screenWidth);
-
   return (
     <DisplayWrapper
       ref={menuRef}
