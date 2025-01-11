@@ -6,7 +6,7 @@ export const MenuDropdown = ({ menuOpened, setMenuOpened }) => {
   const menuRef = useRef();
   const router = useRouter();
   const pathName = usePathname();
-  const [screenWidth, setScreenWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(null);
 
   const routes = [
     { path: "/jobs", label: "Find Jobs" },
@@ -60,6 +60,8 @@ export const MenuDropdown = ({ menuOpened, setMenuOpened }) => {
     };
   }, []);
 
+  console.log(screenWidth);
+
   return (
     <DisplayWrapper
       ref={menuRef}
@@ -91,7 +93,11 @@ const DisplayWrapper = styled.div`
     position: fixed;
     top: 80px;
     right: ${(props) =>
-      props.$menuOpened ? "5%" : `-${props.$screenWidth}px`};
+      props.$screenWidth === null
+        ? "-1000px"
+        : props.$menuOpened
+        ? "5%"
+        : `-${props.$screenWidth}px`};
     display: flex;
     align-items: center;
     justify-content: space-between;
