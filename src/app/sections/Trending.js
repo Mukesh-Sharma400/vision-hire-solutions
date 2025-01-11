@@ -122,8 +122,7 @@ const Job = styled.p`
   &:hover {
     background-color: #f5f5fa;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: box-shadow 0.3s ease-in-out !important;
-    transition: background-color 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
 
   @media (max-width: 500px) {

@@ -143,7 +143,11 @@ const Hamburger = styled.button`
     &:hover {
       background-color: #6598f3;
     }
+    &:focus {
+      background-color: black;
+    }
   }
+
   @media (max-width: 375px) {
     width: 40px;
     height: 40px;

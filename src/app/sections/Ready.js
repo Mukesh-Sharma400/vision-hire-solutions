@@ -99,7 +99,6 @@ const ApplyBtn = styled.button`
   &:hover {
     background-color: #6598f3;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: box-shadow 0.3s ease-in-out !important;
-    transition: background-color 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
 `;
