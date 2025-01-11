@@ -8,13 +8,8 @@ import logo from "../../../public/assets/logo.jpg";
 
 export default function Footer() {
   const pathName = usePathname();
-  const phoneNumber = "+918097775115";
+  const phoneNumber = "+917021739604";
   const currentYear = new Date().getFullYear();
-
-  const sectionData = {
-    description:
-      "Discover job opportunities and career advice tailored to help you excel. Empowering professionals to achieve their goals with Vision Hire Solutions.",
-  };
 
   const socialLinks = [
     {
@@ -24,20 +19,38 @@ export default function Footer() {
       ariaLabel: "WhatsApp",
     },
     {
-      className: "bi bi-instagram",
-      href: "https://www.instagram.com/_mjinteriors",
-      tooltip: "Instagram",
-      ariaLabel: "Instagram",
+      className: "bi bi-github",
+      href: "https://github.com/Mukesh-Sharma400",
+      tooltip: "GitHub",
+      ariaLabel: "GitHub",
+    },
+    {
+      className: "bi bi-linkedin",
+      href: "https://www.linkedin.com/in/mukesh-sharma-dev",
+      tooltip: "LinkedIn",
+      ariaLabel: "LinkedIn",
+    },
+    {
+      className: "bi bi-twitter-x",
+      href: "https://twitter.com/mukesh_sharma36",
+      tooltip: "Twitter / X",
+      ariaLabel: "Twitter / X",
     },
     {
       className: "bi bi-facebook",
-      href: "https://www.facebook.com/profile.php?id=61556937652865&sfnsn=wiwspwa&mibextid=RUbZ1f",
+      href: "https://www.facebook.com/MukeshSharma400",
       tooltip: "Facebook",
       ariaLabel: "Facebook",
     },
     {
+      className: "bi bi-instagram",
+      href: "https://www.instagram.com/mukesh_sharma400",
+      tooltip: "Instagram",
+      ariaLabel: "Instagram",
+    },
+    {
       className: "bi bi-threads",
-      href: "https://www.threads.net/@_mjinteriors",
+      href: "https://www.threads.net/mukesh_sharma400",
       tooltip: "Threads",
       ariaLabel: "Threads",
     },
@@ -64,7 +77,11 @@ export default function Footer() {
       <ColumnsWrapper>
         <Column1>
           <Logo src={logo} alt="MJ Interior" />
-          <Description>{sectionData.description}</Description>
+          <Description>
+            Discover job opportunities and career advice tailored to help you
+            excel. Empowering professionals to achieve their goals with Vision
+            Hire Solutions.
+          </Description>
           <SocialLinksWrapper>
             {socialLinks.map((link, index) => (
               <SocialLink
