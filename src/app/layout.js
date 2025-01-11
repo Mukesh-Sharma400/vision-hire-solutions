@@ -1,8 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "./registry";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Vision Hire Solutions",
@@ -34,7 +31,7 @@ export default function RootLayout({ children }) {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         ></link>
       </head>
-      <body className={`${inter.className}`}>
+      <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
