@@ -95,6 +95,11 @@ const AllJobsBtn = styled.button`
     background-color: rgba(230, 230, 240);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
+
+  @media (max-width: 500px) {
+    font-size: 18px;
+    padding: 0 15px;
+  }
 `;
 
 const JobsWrapper = styled.div`

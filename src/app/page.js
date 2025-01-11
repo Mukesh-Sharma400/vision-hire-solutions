@@ -1,5 +1,6 @@
 import Hero from "./sections/Hero";
 import Jobs from "./sections/Jobs";
+import Ready from "./sections/Ready";
 import Members from "./sections/Members";
 import Trending from "./sections/Trending";
 import SearchBox from "./components/SearchBox";
@@ -13,6 +14,7 @@ export default function Home() {
       <Jobs />
       <Trending />
       <Members />
+      <Ready />
     </BaseLayout>
   );
 }

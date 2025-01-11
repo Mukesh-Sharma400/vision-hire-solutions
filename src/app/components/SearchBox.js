@@ -50,7 +50,7 @@ const SearchIcon = styled.div`
   background-color: #f5f5fa;
   border-radius: 50%;
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `;
@@ -62,6 +62,11 @@ const SearchInput = styled.input`
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 500px) {
+    font-size: 18px;
+    margin-left: 10px;
   }
 `;
 
@@ -80,5 +85,9 @@ const SearchBtn = styled.button`
 
   &:hover {
     background-color: #6598f3;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 18px;
   }
 `;
