@@ -83,6 +83,8 @@ const AllJobsBtn = styled.button`
   padding: 0 20px;
   border-radius: 30px;
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   span {
     font-size: 16px;
@@ -91,8 +93,7 @@ const AllJobsBtn = styled.button`
 
   &:hover {
     background-color: rgba(230, 230, 240);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 
@@ -140,6 +141,8 @@ const JobIcon = styled.div`
   color: black;
   background-color: #f5f5fa;
   border-radius: 50%;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 `;
 
 const JobTitle = styled.p`

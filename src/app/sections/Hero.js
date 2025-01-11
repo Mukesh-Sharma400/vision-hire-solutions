@@ -80,6 +80,8 @@ const Heading = styled.h1`
   font-size: 60px;
   font-weight: 900;
   margin-top: 80px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   @media (max-width: 1024px) {
     font-size: 50px;
@@ -92,6 +94,8 @@ const Heading = styled.h1`
 const Description = styled.p`
   max-width: 900px;
   font-size: 22px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   @media (max-width: 768px) {
     font-size: 18px;
@@ -110,6 +114,8 @@ const PersonImagesWrapper = styled.div`
 
 const PersonImage = styled(Image)`
   border-radius: 50%;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   &.person1 {
     position: absolute;
