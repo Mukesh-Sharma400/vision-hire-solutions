@@ -47,7 +47,7 @@ const SearchIcon = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.2);
+  color: #8083a3;
   background-color: #f5f5fa;
   border-radius: 50%;
 

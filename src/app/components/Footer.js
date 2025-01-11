@@ -229,7 +229,7 @@ const BottomWrapper = styled.div`
   font-size: 16px;
   margin-top: 20px;
   padding: 20px 0;
-  border-top: 1px solid rgba(230, 230, 240);
+  border-top: 1.5px solid rgba(230, 230, 240);
 
   @media (max-width: 768px) {
     font-size: 13px;

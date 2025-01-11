@@ -154,6 +154,6 @@ const MemberName = styled.p`
 `;
 
 const MemberDescription = styled.p`
-  color: darkgray;
+  color: #8083a3;
   font-size: 17px;
 `;
