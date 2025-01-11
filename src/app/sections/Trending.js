@@ -76,6 +76,7 @@ const LeftSide = styled.div`
 
 const SubHeading = styled.p`
   font-size: 14px;
+  font-weight: 600;
   color: #6598f3;
 `;
 

@@ -2,12 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
 import styled from "styled-components";
-import { usePathname } from "next/navigation";
 
 import logo from "../../../public/assets/logo.jpg";
 
 export default function Footer() {
-  const pathName = usePathname();
   const phoneNumber = "+917021739604";
   const currentYear = new Date().getFullYear();
 
@@ -82,13 +80,11 @@ export default function Footer() {
         <Column2>
           <SectionHeading>Pages</SectionHeading>
           <PagesWrapper>
-            {routesData.map((page) =>
-              page.path === pathName ? null : (
-                <Page key={page.path} href={page.path}>
-                  {page.label}
-                </Page>
-              )
-            )}
+            {routesData.map((page) => (
+              <Page key={page.path} href={page.path}>
+                {page.label}
+              </Page>
+            ))}
           </PagesWrapper>
         </Column2>
       </ColumnsWrapper>
