@@ -136,11 +136,9 @@ const Column1 = styled.div`
   gap: 1rem;
 
   @media (max-width: 768px) {
-    width: 85%;
-  }
-
-  @media (max-width: 426px) {
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -152,10 +150,6 @@ const Logo = styled(Image)`
 const Description = styled.p`
   font-size: 15px;
   color: black;
-
-  @media (max-width: 950px) {
-    font-size: 13px;
-  }
 `;
 
 const SocialLinksWrapper = styled.div`
@@ -163,6 +157,10 @@ const SocialLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const SocialLink = styled(Link)`
@@ -197,7 +195,8 @@ const Column2 = styled.div`
   gap: 2rem;
 
   @media (max-width: 768px) {
-    width: 35%;
+    width: 100%;
+    align-items: center;
   }
 `;
 
@@ -205,6 +204,10 @@ const PagesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Page = styled(Link)`
@@ -216,10 +219,6 @@ const Page = styled(Link)`
 
   &:hover {
     color: #6598f3;
-  }
-
-  @media (max-width: 950px) {
-    font-size: 13px;
   }
 `;
 
