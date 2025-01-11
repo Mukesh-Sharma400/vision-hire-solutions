@@ -1,13 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { MenuDropdown } from "./MenuDropdown";
 
 import logo from "../../../public/assets/logo.jpg";
 
 export default function Header() {
-  const pathname = usePathname();
+  const pathName = usePathname();
+  const [menuOpened, setMenuOpened] = useState(false);
 
   const routes = [
     { path: "/jobs", label: "Find Jobs" },
@@ -15,6 +17,10 @@ export default function Header() {
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact Us" },
   ];
+
+  const handleMenu = () => {
+    setMenuOpened(!menuOpened);
+  };
 
   useEffect(() => {
     const tooltipTriggerList = [].slice.call(
@@ -26,36 +32,35 @@ export default function Header() {
   }, []);
 
   return (
-    <DisplayWrapper>
-      <HomeRoute href="/">
-        <Logo src={logo} alt="Vision Hire Solutions" quality={100} />
-      </HomeRoute>
-      <Routes>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            href={route.path}
-            className={` ${
-              pathname === route.path || pathname.startsWith(route.path + "/")
-                ? "active"
-                : ""
-            }`}
+    <>
+      <DisplayWrapper>
+        <HomeRoute href="/">
+          <Logo src={logo} alt="Vision Hire Solutions" quality={100} />
+        </HomeRoute>
+        <Routes>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              href={route.path}
+              className={pathName === route.path ? "active" : ""}
+            >
+              {route.label}
+            </Route>
+          ))}
+          <SearchBtn
+            data-bs-toggle="tooltip"
+            data-bs-title="Search"
+            data-bs-custom-class="custom-tooltip"
           >
-            {route.label}
-          </Route>
-        ))}
-        <SearchBtn
-          data-bs-toggle="tooltip"
-          data-bs-title="Search"
-          data-bs-custom-class="custom-tooltip"
-        >
-          <i className="bi bi-search"></i>
-        </SearchBtn>
-      </Routes>
-      <Hamburger>
-        <i className="bi bi-list"></i>
-      </Hamburger>
-    </DisplayWrapper>
+            <i className="bi bi-search"></i>
+          </SearchBtn>
+        </Routes>
+        <Hamburger onClick={handleMenu}>
+          <i className="bi bi-list"></i>
+        </Hamburger>
+      </DisplayWrapper>
+      <MenuDropdown menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+    </>
   );
 }
 

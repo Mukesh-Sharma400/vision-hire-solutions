@@ -1,10 +1,10 @@
-import Hero from "../sections/Hero";
-import Jobs from "../sections/Jobs";
-import Ready from "../sections/Ready";
-import Members from "../sections/Members";
-import Trending from "../sections/Trending";
-import SearchBox from "../components/SearchBox";
-import BaseLayout from "../components/BaseLayout";
+import Hero from "@/app/sections/Hero";
+import Jobs from "@/app/sections/Jobs";
+import Ready from "@/app/sections/Ready";
+import Members from "@/app/sections/Members";
+import Trending from "@/app/sections/Trending";
+import SearchBox from "@/app/components/SearchBox";
+import BaseLayout from "@/app/components/BaseLayout";
 
 export default function Home() {
   return (
