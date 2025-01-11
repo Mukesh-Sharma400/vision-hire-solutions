@@ -29,7 +29,7 @@ const DisplayWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 0 0;
 `;
 
 const BottomWrapper = styled.div`
@@ -38,6 +38,8 @@ const BottomWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(230, 230, 240);
 
   @media (max-width: 768px) {
     font-size: 13px;

@@ -101,7 +101,7 @@ const RightSide = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
 `;
 
 const Job = styled.p`
