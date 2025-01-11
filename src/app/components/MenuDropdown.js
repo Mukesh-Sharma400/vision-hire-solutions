@@ -45,7 +45,7 @@ export const MenuDropdown = ({ menuOpened, setMenuOpened }) => {
       document.removeEventListener("click", handleDocumentClick);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [menuOpened]);
+  }, [menuOpened, setMenuOpened]);
 
   useEffect(() => {
     const handleResize = () => {
