@@ -4,15 +4,16 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 
 export default function Ready() {
-  const [screenWidth, setScreenWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
+
+    setScreenWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
