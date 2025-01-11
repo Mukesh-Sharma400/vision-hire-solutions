@@ -1,18 +1,39 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
+import { usePathname } from "next/navigation";
 
 import logo from "../../../public/assets/logo.jpg";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const routes = [
+    { path: "/jobs", label: "Find Jobs" },
+    { path: "/team", label: "Our Team" },
+    { path: "/about", label: "About" },
+    { path: "/contact", label: "Contact Us" },
+  ];
+
   return (
     <DisplayWrapper>
-      <Logo src={logo} alt="Vision Hire Solutions" quality={100} />
+      <HomeRoute href="/">
+        <Logo src={logo} alt="Vision Hire Solutions" quality={100} />
+      </HomeRoute>
       <Routes>
-        <Route href="/">Find Jobs</Route>
-        <Route href="/">Our Team</Route>
-        <Route href="/">About</Route>
-        <Route href="/">Contact Us</Route>
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            className={` ${
+              pathname === route.path || pathname.startsWith(route.path + "/")
+                ? "active"
+                : ""
+            }`}
+            href={route.path}
+          >
+            {route.label}
+          </Route>
+        ))}
         <SearchBtn>
           <i className="bi bi-search"></i>
         </SearchBtn>
@@ -29,6 +50,15 @@ const DisplayWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+`;
+
+const HomeRoute = styled(Link)`
+  width: auto;
+  height: 60px;
+
+  @media (max-width: 375px) {
+    height: 50px;
+  }
 `;
 
 const Logo = styled(Image)`
@@ -55,6 +85,9 @@ const Route = styled(Link)`
   font-weight: 600;
 
   &:hover {
+    color: #6598f3;
+  }
+  &:active {
     color: #6598f3;
   }
 `;

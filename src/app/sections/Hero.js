@@ -12,6 +12,15 @@ import person6 from "../../../public/assets/person6.jpg";
 import person7 from "../../../public/assets/person7.jpg";
 
 export default function Hero() {
+  const persons = [
+    { src: person1, className: "person1", alt: "Person1" },
+    { src: person2, className: "person2", alt: "Person2" },
+    { src: person3, className: "person3", alt: "Person3" },
+    { src: person4, className: "person4", alt: "Person4" },
+    { src: person5, className: "person5", alt: "Person5" },
+    { src: person6, className: "person6", alt: "Person6" },
+    { src: person7, className: "person7", alt: "Person7" },
+  ];
   return (
     <DisplayWrapper>
       <Heading>Explore Jobs Across India</Heading>
@@ -22,48 +31,15 @@ export default function Hero() {
       </Description>
       <ImagesWrapper>
         <PersonImagesWrapper>
-          <PersonImage
-            src={person1}
-            className="person1"
-            alt="Person1"
-            quality={100}
-          />
-          <PersonImage
-            src={person2}
-            className="person2"
-            alt="Person2"
-            quality={100}
-          />
-          <PersonImage
-            src={person3}
-            className="person3"
-            alt="Person3"
-            quality={100}
-          />
-          <PersonImage
-            src={person4}
-            className="person4"
-            alt="Person4"
-            quality={100}
-          />
-          <PersonImage
-            src={person5}
-            className="person5"
-            alt="Person5"
-            quality={100}
-          />
-          <PersonImage
-            src={person6}
-            className="person6"
-            alt="Person6"
-            quality={100}
-          />
-          <PersonImage
-            src={person7}
-            className="person7"
-            alt="Person7"
-            quality={100}
-          />
+          {persons.map((person, index) => (
+            <PersonImage
+              key={index}
+              src={person.src}
+              className={person.className}
+              alt={person.alt}
+              quality={100}
+            />
+          ))}
         </PersonImagesWrapper>
       </ImagesWrapper>
     </DisplayWrapper>
