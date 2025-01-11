@@ -95,7 +95,7 @@ const Heading = styled.h1`
 
 const Description = styled.p`
   max-width: 900px;
-  font-size: 22px;
+  font-size: 20px;
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
