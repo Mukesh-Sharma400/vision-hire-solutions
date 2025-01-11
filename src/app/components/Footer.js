@@ -19,24 +19,6 @@ export default function Footer() {
       ariaLabel: "WhatsApp",
     },
     {
-      className: "bi bi-github",
-      href: "https://github.com/Mukesh-Sharma400",
-      tooltip: "GitHub",
-      ariaLabel: "GitHub",
-    },
-    {
-      className: "bi bi-linkedin",
-      href: "https://www.linkedin.com/in/mukesh-sharma-dev",
-      tooltip: "LinkedIn",
-      ariaLabel: "LinkedIn",
-    },
-    {
-      className: "bi bi-twitter-x",
-      href: "https://twitter.com/mukesh_sharma36",
-      tooltip: "Twitter / X",
-      ariaLabel: "Twitter / X",
-    },
-    {
       className: "bi bi-facebook",
       href: "https://www.facebook.com/MukeshSharma400",
       tooltip: "Facebook",

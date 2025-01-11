@@ -1,8 +1,23 @@
 "use client";
 
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 export default function Ready() {
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <DisplayWrapper>
       <LeftSide>
@@ -12,7 +27,9 @@ export default function Ready() {
           aspirations to take your next big step.
         </Description>
       </LeftSide>
-      <ApplyBtn data-aos="fade-right">Apply and Start Today</ApplyBtn>
+      <ApplyBtn data-aos={screenWidth > 768 ? "fade-right" : "fade-up"}>
+        Apply and Start Today
+      </ApplyBtn>
     </DisplayWrapper>
   );
 }
