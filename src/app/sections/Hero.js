@@ -49,6 +49,7 @@ export default function Hero() {
 const DisplayWrapper = styled.div`
   width: 100%;
   height: 100vh;
+  max-height: 550px;
   background-image: url("/assets/gradient-background.jpg");
   background-size: cover;
   background-position: center;
