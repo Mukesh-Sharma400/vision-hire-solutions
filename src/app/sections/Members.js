@@ -82,7 +82,7 @@ const MeetTeamBtn = styled.button`
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   span {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 15px;
   }
 
