@@ -1,0 +1,152 @@
+"use client";
+
+import Image from "next/image";
+import styled from "styled-components";
+
+import person1 from "../../../public/assets/person1.jpg";
+import person2 from "../../../public/assets/person2.jpg";
+import person3 from "../../../public/assets/person3.jpg";
+
+export default function Members() {
+  const members = [
+    {
+      image: person1,
+      name: "John Doe",
+      location: "New York, USA",
+      position: "Team Lead",
+    },
+    {
+      image: person2,
+      name: "Jane Smith",
+      location: "London, UK",
+      position: "Project Manager",
+    },
+    {
+      image: person3,
+      name: "Michael Johnson",
+      location: "Sydney, Australia",
+      position: "Developer",
+    },
+  ];
+
+  return (
+    <DisplayWrapper>
+      <HeadingWrapper>
+        <Heading>Team members</Heading>
+        <MeetTeamBtn>
+          <i className="bi bi-three-dots"></i> <span>Meet our team</span>
+        </MeetTeamBtn>
+      </HeadingWrapper>
+      <MembersWrapper>
+        {members.map((member, index) => (
+          <MemberWrapper key={index}>
+            <MemberImage src={member.image} alt={member.name} quality={100} />
+            <MemberName>{member.name}</MemberName>
+            <MemberDescription>
+              {member.location} / {member.position}
+            </MemberDescription>
+          </MemberWrapper>
+        ))}
+      </MembersWrapper>
+    </DisplayWrapper>
+  );
+}
+
+const DisplayWrapper = styled.div``;
+
+const HeadingWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Heading = styled.h3`
+  font-size: 25px;
+  font-weight: 700;
+`;
+
+const MeetTeamBtn = styled.button`
+  width: fit-content;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: #f5f5fa;
+  font-size: 20px;
+  padding: 0 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  span {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+
+  &:hover {
+    background-color: rgba(230, 230, 240);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+`;
+
+const MembersWrapper = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const MemberWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+`;
+
+const MemberImage = styled(Image)`
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: black;
+  background-color: #f5f5fa;
+  border-radius: 50%;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+`;
+
+const MemberName = styled.p`
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+`;
+
+const MemberDescription = styled.p`
+  color: darkgray;
+  font-size: 17px;
+`;
