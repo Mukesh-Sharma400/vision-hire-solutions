@@ -88,6 +88,7 @@ const AllJobsBtn = styled.button`
 
   span {
     font-size: 14px;
+    font-weight: 600;
     margin-left: 15px;
   }
 
