@@ -71,6 +71,7 @@ const DisplayWrapper = styled.div`
   @media (max-width: 550px) {
     padding: 0 30px;
     height: 70vh;
+    max-height: auto;
   }
   @media (max-width: 426px) {
     padding: 0 20px;
