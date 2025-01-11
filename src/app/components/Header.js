@@ -101,7 +101,7 @@ const Route = styled(Link)`
   &:hover {
     color: #6598f3;
   }
-  &:active {
+  &.active {
     color: #6598f3;
   }
 `;
