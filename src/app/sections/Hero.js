@@ -100,6 +100,9 @@ const Description = styled.p`
   @media (max-width: 768px) {
     font-size: 18px;
   }
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const ImagesWrapper = styled.div``;
