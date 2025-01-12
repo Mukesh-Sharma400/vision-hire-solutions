@@ -156,7 +156,7 @@ export default function JobsPage() {
             </MoreFilter>
           </FiltersWrapper>
           {jobs.map((job, index) => (
-            <JobWrapper key={index}>
+            <JobWrapper key={index} data-aos="fade-up">
               <JobIcon>
                 <i className={job.icon}></i>
               </JobIcon>
