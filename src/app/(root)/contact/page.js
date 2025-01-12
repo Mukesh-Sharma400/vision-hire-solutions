@@ -2,17 +2,17 @@
 
 import Image from "next/image";
 import styled from "styled-components";
+import Toast from "@/app/components/Toast";
 import { useEffect, useRef, useState } from "react";
 import BaseLayout from "@/app/components/BaseLayout";
 
 import flag from "../../../../public/assets/india.png";
-import Toast from "@/app/components/Toast";
 
 export default function ContactPage() {
   const form = useRef();
   const timeoutRef = useRef(null);
-  const phoneNumber = "+918097775115";
-  const emailAddress = "mjinteriors2007@gmail.com";
+  const phoneNumber = "+917021739604";
+  const emailAddress = "mksh400@gmail.com";
   const [toast, setToast] = useState({ visible: false, message: "" });
 
   const showToastMethod = (message) => {
