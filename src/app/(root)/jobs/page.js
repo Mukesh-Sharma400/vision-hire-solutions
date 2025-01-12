@@ -263,26 +263,6 @@ const FilterLeftWrapper = styled.div`
   gap: 10px;
 `;
 
-const MoreFilter = styled.button`
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:hover {
-    color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-`;
-
 const Filter = styled.button`
   width: fit-content;
   height: 40px;
@@ -306,6 +286,31 @@ const Filter = styled.button`
     color: white;
     background-color: black;
     border: 1px solid black;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+`;
+
+const MoreFilter = styled.button`
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
 
