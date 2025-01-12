@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
 import styled from "styled-components";
+import { useEffect, useRef } from "react";
 import BaseLayout from "@/app/components/BaseLayout";
 
 import flag from "../../../../public/assets/india.png";
@@ -14,16 +14,27 @@ export default function ContactPage() {
     e.preventDefault();
   };
 
+  useEffect(() => {
+    const tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    const tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
+      return new window.bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }, []);
+
   return (
     <BaseLayout>
       <DisplayWrapper>
         <ContentWrapper>
           <LeftSide>
-            <Heading>Contact Us</Heading>
-            <Description>
-              Become our team member, apply for the job post today and send us
-              your detailed CV.
-            </Description>
+            <HeadingWrapper>
+              <Heading>Contact Us</Heading>
+              <Description>
+                Become our team member, apply for the job post today and send us
+                your detailed CV.
+              </Description>
+            </HeadingWrapper>
             <AddressCard>
               <AddressHeading>Headquarter office</AddressHeading>
               <AddressDescription>
@@ -45,6 +56,13 @@ export default function ContactPage() {
                 <CallEmailDataHeading>+91 702-173-9604</CallEmailDataHeading>
                 <CallEmailDataDescription>Call us</CallEmailDataDescription>
               </CallEmailData>
+              <CopyBtn
+                data-bs-toggle="tooltip"
+                data-bs-title="Copy"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <i className="bi bi-copy"></i>
+              </CopyBtn>
             </CallEmailCard>
             <CallEmailCard>
               <CallEmailIcon>
@@ -56,6 +74,13 @@ export default function ContactPage() {
                   Send your email
                 </CallEmailDataDescription>
               </CallEmailData>
+              <CopyBtn
+                data-bs-toggle="tooltip"
+                data-bs-title="Copy"
+                data-bs-custom-class="custom-tooltip"
+              >
+                <i className="bi bi-copy"></i>
+              </CopyBtn>
             </CallEmailCard>
           </LeftSide>
           <ContactForm ref={form} onSubmit={handleSendMessage}>
@@ -134,6 +159,14 @@ const LeftSide = styled.div`
   gap: 1rem;
 `;
 
+const HeadingWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+`;
+
 const Heading = styled.h2`
   font-size: 60px;
   line-height: 60px;
@@ -193,14 +226,8 @@ const CallEmailCard = styled.div`
   gap: 1rem;
   padding: 1rem;
   border-radius: 20px;
-  cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-  &:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: box-shadow 0.3s ease-in-out !important;
-  }
 `;
 
 const CallEmailIcon = styled.div`
@@ -228,6 +255,30 @@ const CallEmailDataHeading = styled.p`
 
 const CallEmailDataDescription = styled.p`
   font-size: 14px;
+`;
+
+const CopyBtn = styled.button`
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  color: black;
+  background-color: #f5f5fa;
+  border-radius: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  &:hover {
+    background-color: rgba(230, 230, 240);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s ease-in-out !important;
+  }
 `;
 
 const ContactForm = styled.form`
@@ -320,6 +371,6 @@ const Button = styled.button`
 const GoogleMaps = styled.iframe`
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  min-height: 300px;
   border-radius: 20px;
 `;
