@@ -79,16 +79,13 @@ const SearchBtn = styled.button`
   justify-content: center;
   color: white;
   background-color: black;
-  font-size: 20px;
-  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 25px;
   border-radius: 30px;
   cursor: pointer;
 
   &:hover {
     background-color: #6598f3;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 18px;
   }
 `;

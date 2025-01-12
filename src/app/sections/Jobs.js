@@ -43,7 +43,8 @@ export default function Jobs() {
             </JobIcon>
             <JobTitle>{job.title}</JobTitle>
             <JobDescription>
-              <i className="bi bi-geo-alt-fill"></i> {job.location} / {job.type}
+              <i className="bi bi-geo-alt-fill"></i> {job.location}{" "}
+              <span>/</span> {job.type}
             </JobDescription>
             <JobSalary>
               <span>{job.salary}</span> Avg. salary
@@ -149,8 +150,6 @@ const JobIcon = styled.div`
   color: black;
   background-color: #f5f5fa;
   border-radius: 50%;
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 `;
 
 const JobTitle = styled.p`
@@ -162,6 +161,10 @@ const JobTitle = styled.p`
 const JobDescription = styled.p`
   color: #8083a3;
   font-size: 17px;
+
+  span {
+    margin: 0 7px;
+  }
 `;
 
 const JobSalary = styled.p`
