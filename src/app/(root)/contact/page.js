@@ -376,6 +376,6 @@ const Button = styled.button`
 const GoogleMaps = styled.iframe`
   width: 100%;
   height: 100%;
-  min-height: 300px;
+  min-height: 400px;
   border-radius: 20px;
 `;

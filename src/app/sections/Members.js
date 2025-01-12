@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -33,7 +34,7 @@ export default function Members() {
     <DisplayWrapper>
       <HeadingWrapper>
         <Heading>Team members</Heading>
-        <MeetTeamBtn data-aos="fade-right">
+        <MeetTeamBtn href="/team" data-aos="fade-right">
           <i className="bi bi-three-dots"></i> <span>Meet our team</span>
         </MeetTeamBtn>
       </HeadingWrapper>
@@ -66,7 +67,7 @@ const Heading = styled.h3`
   font-weight: 700;
 `;
 
-const MeetTeamBtn = styled.button`
+const MeetTeamBtn = styled(Link)`
   width: fit-content;
   height: 50px;
   display: flex;

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function Jobs() {
@@ -31,7 +32,7 @@ export default function Jobs() {
     <DisplayWrapper>
       <HeadingWrapper>
         <Heading>Trending jobs</Heading>
-        <AllJobsBtn data-aos="fade-right">
+        <AllJobsBtn href="/jobs" data-aos="fade-right">
           <i className="bi bi-three-dots"></i> <span>See all jobs</span>
         </AllJobsBtn>
       </HeadingWrapper>
@@ -72,7 +73,7 @@ const Heading = styled.h3`
   font-weight: 700;
 `;
 
-const AllJobsBtn = styled.button`
+const AllJobsBtn = styled(Link)`
   width: fit-content;
   height: 50px;
   display: flex;
