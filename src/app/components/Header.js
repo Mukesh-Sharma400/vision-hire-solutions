@@ -145,7 +145,7 @@ const Hamburger = styled.button`
     justify-content: center;
     color: white;
     background-color: black;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 50%;
     cursor: pointer;
 
