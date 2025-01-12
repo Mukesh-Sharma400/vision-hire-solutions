@@ -29,7 +29,7 @@ export default function Hero() {
         help you thrive. At Vision Hire Solutions, we empower professionals to
         reach new heights in their career journey.
       </Description>
-      <ImagesWrapper>
+      <ImagesWrapper data-aos="fade-up">
         <PersonImagesWrapper>
           {persons.map((person, index) => (
             <PersonImage

@@ -35,7 +35,7 @@ export default function ContactPage() {
                 your detailed CV.
               </Description>
             </HeadingWrapper>
-            <AddressCard>
+            <AddressCard data-aos="fade-up">
               <AddressHeading>Headquarter office</AddressHeading>
               <AddressDescription>
                 Storkower Strasse 41
@@ -48,7 +48,7 @@ export default function ContactPage() {
               </AddressDescription>
               <FlagImage src={flag} alt="India" quality={100} />
             </AddressCard>
-            <CallEmailCard>
+            <CallEmailCard data-aos="fade-up">
               <CallEmailIcon>
                 <i className="bi bi-telephone-fill"></i>
               </CallEmailIcon>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 <i className="bi bi-copy"></i>
               </CopyBtn>
             </CallEmailCard>
-            <CallEmailCard>
+            <CallEmailCard data-aos="fade-up">
               <CallEmailIcon>
                 <i className="bi bi-envelope-fill"></i>
               </CallEmailIcon>
@@ -83,7 +83,11 @@ export default function ContactPage() {
               </CopyBtn>
             </CallEmailCard>
           </LeftSide>
-          <ContactForm ref={form} onSubmit={handleSendMessage}>
+          <ContactForm
+            ref={form}
+            onSubmit={handleSendMessage}
+            data-aos="fade-up"
+          >
             <FieldContainer>
               <Label>Full Name</Label>
               <TextBox placeholder="John Doe" name="from_name" required />
@@ -121,6 +125,7 @@ export default function ContactPage() {
           </ContactForm>
         </ContentWrapper>
         <GoogleMaps
+          data-aos="fade-up"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24866.562752799404!2d72.98647896047301!3d19.126320510200138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0ae08fd4fcb%3A0xeb29360c730e957f!2sGhansoli%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1707053510196!5m2!1sen!2sin"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
