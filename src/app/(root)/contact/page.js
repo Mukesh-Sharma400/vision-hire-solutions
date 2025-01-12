@@ -2,13 +2,38 @@
 
 import Image from "next/image";
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import BaseLayout from "@/app/components/BaseLayout";
 
 import flag from "../../../../public/assets/india.png";
+import Toast from "@/app/components/Toast";
 
 export default function ContactPage() {
   const form = useRef();
+  const timeoutRef = useRef(null);
+  const phoneNumber = "+918097775115";
+  const emailAddress = "mjinteriors2007@gmail.com";
+  const [toast, setToast] = useState({ visible: false, message: "" });
+
+  const showToastMethod = (message) => {
+    setToast({ visible: true, message });
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setToast({ visible: false, message: "" });
+    }, 3000);
+  };
+
+  const handleOpenDialer = () => {
+    const telUrl = `tel:${phoneNumber}`;
+    window.location.href = telUrl;
+  };
+
+  const handleOpenMailer = () => {
+    const mailUrl = `mailto:${emailAddress}`;
+    window.location.href = mailUrl;
+  };
 
   const handleSendMessage = (e) => {
     e.preventDefault();
@@ -25,6 +50,9 @@ export default function ContactPage() {
 
   return (
     <BaseLayout>
+      <ToastWrapper $showToast={toast.visible}>
+        <Toast message={toast.message} />
+      </ToastWrapper>
       <DisplayWrapper>
         <ContentWrapper>
           <LeftSide>
@@ -58,8 +86,9 @@ export default function ContactPage() {
               </CallEmailData>
               <CopyBtn
                 data-bs-toggle="tooltip"
-                data-bs-title="Copy"
+                data-bs-title="Copy Number"
                 data-bs-custom-class="custom-tooltip"
+                onClick={handleOpenDialer}
               >
                 <i className="bi bi-copy"></i>
               </CopyBtn>
@@ -76,8 +105,9 @@ export default function ContactPage() {
               </CallEmailData>
               <CopyBtn
                 data-bs-toggle="tooltip"
-                data-bs-title="Copy"
+                data-bs-title="Copy Email"
                 data-bs-custom-class="custom-tooltip"
+                onClick={handleOpenMailer}
               >
                 <i className="bi bi-copy"></i>
               </CopyBtn>
@@ -134,6 +164,15 @@ export default function ContactPage() {
     </BaseLayout>
   );
 }
+
+const ToastWrapper = styled.div`
+  position: fixed;
+  top: ${(props) => (props.$showToast ? "10%" : "-20%")};
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+`;
 
 const DisplayWrapper = styled.div`
   width: 100%;
