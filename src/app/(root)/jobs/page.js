@@ -6,7 +6,7 @@ import SearchBox from "@/app/components/SearchBox";
 import BaseLayout from "@/app/components/BaseLayout";
 
 export default function JobsPage() {
-  const [activeFilter, setActiveFilter] = useState("All Jobs");
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
@@ -129,10 +129,10 @@ export default function JobsPage() {
           <FiltersWrapper>
             <FilterLeftWrapper>
               <Filter
-                className={activeFilter === "All Jobs" ? "active" : ""}
-                onClick={() => handleFilterClick("All Jobs")}
+                className={activeFilter === "All" ? "active" : ""}
+                onClick={() => handleFilterClick("All")}
               >
-                All Jobs
+                All
               </Filter>
               <Filter
                 className={activeFilter === "Trending" ? "active" : ""}
