@@ -98,8 +98,9 @@ const RightSide = styled.div`
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
   justify-content: center;
+  gap: 1rem;
   background-image: url("/assets/gradient-background.jpg");
   background-size: cover;
   background-position: center;
@@ -109,7 +110,11 @@ const RightSide = styled.div`
 
 const Job = styled.p`
   width: fit-content;
-  font-size: 14px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
   font-weight: 600;
   color: black;
   background-color: white;
@@ -123,9 +128,5 @@ const Job = styled.p`
     background-color: #f5f5fa;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all 0.3s ease-in-out !important;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 12px;
   }
 `;

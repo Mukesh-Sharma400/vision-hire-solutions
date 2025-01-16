@@ -34,7 +34,7 @@ export default function Members() {
     <DisplayWrapper>
       <HeadingWrapper>
         <Heading>Team members</Heading>
-        <MeetTeamBtn href="/team" data-aos="fade-right">
+        <MeetTeamBtn href="/about" data-aos="fade-right">
           <i className="bi bi-three-dots"></i> <span>Meet our team</span>
         </MeetTeamBtn>
       </HeadingWrapper>

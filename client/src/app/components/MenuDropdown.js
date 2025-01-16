@@ -10,8 +10,7 @@ export const MenuDropdown = ({ menuOpened, setMenuOpened }) => {
 
   const routes = [
     { path: "/jobs", label: "Find Jobs" },
-    { path: "/team", label: "Our Team" },
-    { path: "/about", label: "About" },
+    { path: "/about", label: "About Us" },
     { path: "/contact", label: "Contact Us" },
   ];
 
