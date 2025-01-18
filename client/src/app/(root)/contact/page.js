@@ -179,7 +179,7 @@ const DisplayWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin: 2rem 0 4rem;
 `;
 
 const ContentWrapper = styled.div`
@@ -216,6 +216,13 @@ const Heading = styled.h2`
   line-height: 60px;
   font-weight: 900;
   letter-spacing: 1px;
+
+  @media (max-width: 500px) {
+    font-size: 50px;
+  }
+  @media (max-width: 320px) {
+    font-size: 45px;
+  }
 `;
 
 const Description = styled.p`
@@ -286,6 +293,18 @@ const CallEmailIcon = styled.div`
   color: white;
   background-color: black;
   border-radius: 50%;
+
+  @media (max-width: 375px) {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 320px) {
+    display: none;
+  }
 `;
 
 const CallEmailData = styled.div``;
@@ -293,12 +312,19 @@ const CallEmailData = styled.div``;
 const CallEmailDataHeading = styled.p`
   font-size: 16px;
   font-weight: 900;
-
   margin-bottom: 10px;
+
+  @media (max-width: 375px) {
+    font-size: 14px;
+  }
 `;
 
 const CallEmailDataDescription = styled.p`
   font-size: 14px;
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const CopyBtn = styled.button`
@@ -323,6 +349,14 @@ const CopyBtn = styled.button`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all 0.3s ease-in-out !important;
   }
+
+  @media (max-width: 375px) {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 20px;
+  }
 `;
 
 const ContactForm = styled.form`
@@ -335,6 +369,10 @@ const ContactForm = styled.form`
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  @media (max-width: 375px) {
+    padding: 1rem;
+  }
 `;
 
 const FieldContainer = styled.div`
@@ -410,6 +448,10 @@ const Button = styled.button`
   color: white;
   background-color: #6598f3;
   border-radius: 10px;
+
+  @media (max-width: 375px) {
+    font-size: 18px;
+  }
 `;
 
 const GoogleMaps = styled.iframe`
