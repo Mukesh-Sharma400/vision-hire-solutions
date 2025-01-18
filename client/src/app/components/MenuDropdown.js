@@ -131,7 +131,8 @@ const Route = styled.button`
   text-decoration: none;
 
   &.active {
-    font-weight: 600;
+    color: #6598f3;
+    font-weight: 700;
   }
 `;
 

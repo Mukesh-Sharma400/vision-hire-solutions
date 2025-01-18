@@ -184,13 +184,6 @@ const SocialLink = styled(Link)`
   }
 `;
 
-const SectionHeading = styled.p`
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: black;
-`;
-
 const Column2 = styled.div`
   width: 50%;
   display: flex;
@@ -202,6 +195,14 @@ const Column2 = styled.div`
     width: 100%;
     align-items: center;
   }
+`;
+
+const SectionHeading = styled.p`
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8083a3;
 `;
 
 const PagesWrapper = styled.div`
@@ -216,7 +217,7 @@ const PagesWrapper = styled.div`
 
 const Page = styled(Link)`
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: black;
   text-decoration: none;
