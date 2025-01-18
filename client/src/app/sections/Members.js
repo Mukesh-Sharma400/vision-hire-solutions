@@ -13,19 +13,16 @@ export default function Members() {
     {
       image: person1,
       name: "John Doe",
-      location: "New York, USA",
       position: "Team Lead",
     },
     {
       image: person2,
       name: "Jane Smith",
-      location: "London, UK",
       position: "Project Manager",
     },
     {
       image: person3,
       name: "Michael Johnson",
-      location: "Sydney, Australia",
       position: "Developer",
     },
   ];
@@ -34,7 +31,7 @@ export default function Members() {
     <DisplayWrapper>
       <HeadingWrapper>
         <Heading>Team members</Heading>
-        <MeetTeamBtn href="/about" data-aos="fade-right">
+        <MeetTeamBtn href="/about#members" data-aos="fade-right">
           <i className="bi bi-three-dots"></i> <span>Meet our team</span>
         </MeetTeamBtn>
       </HeadingWrapper>
@@ -43,9 +40,7 @@ export default function Members() {
           <MemberWrapper key={index} data-aos="fade-up">
             <MemberImage src={member.image} alt={member.name} quality={100} />
             <MemberName>{member.name}</MemberName>
-            <MemberDescription>
-              {member.location} / {member.position}
-            </MemberDescription>
+            <MemberDescription>{member.position}</MemberDescription>
           </MemberWrapper>
         ))}
       </MembersWrapper>

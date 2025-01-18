@@ -44,7 +44,6 @@ const DisplayWrapper = styled.div`
   background-position: center;
   border-radius: 20px;
   padding: 3rem 2rem;
-  margin: 4rem 0;
 
   @media (max-width: 768px) {
     flex-direction: column;

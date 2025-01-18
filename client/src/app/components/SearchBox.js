@@ -21,7 +21,7 @@ const DisplayWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin: -35px auto;
+  margin: -67px auto;
   padding: 10px;
   border-radius: 40px;
   background: white;

@@ -198,7 +198,7 @@ const Column2 = styled.div`
 `;
 
 const SectionHeading = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;

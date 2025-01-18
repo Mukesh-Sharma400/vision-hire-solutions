@@ -57,8 +57,8 @@ export default function ContactPage() {
         <ContentWrapper>
           <LeftSide>
             <HeadingWrapper>
-              <Heading>Contact Us</Heading>
-              <Description>
+              <Heading data-aos="fade-up">Contact Us</Heading>
+              <Description data-aos="fade-up" data-aos-delay="100">
                 Become our team member, apply for the job post today and send us
                 your detailed CV.
               </Description>
@@ -179,7 +179,7 @@ const DisplayWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin: 2rem 0 4rem;
+  margin: 0 0 4rem;
 `;
 
 const ContentWrapper = styled.div`

@@ -193,7 +193,13 @@ export default function JobsPage() {
   );
 }
 
-const DisplayWrapper = styled.div``;
+const DisplayWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 0 4rem;
+`;
 
 const HeaderWrapper = styled.div`
   width: 100%;
@@ -319,7 +325,7 @@ const JobsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin: 4rem auto;
+  margin: 4rem auto 0;
 
   @media (max-width: 1024px) {
     width: 100%;
