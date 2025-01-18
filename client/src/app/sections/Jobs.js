@@ -71,6 +71,16 @@ const HeadingWrapper = styled.div`
 const Heading = styled.h3`
   font-size: 25px;
   font-weight: 700;
+
+  @media (max-width: 425px) {
+    font-size: 23px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
+  @media (max-width: 320px) {
+    font-size: 16px;
+  }
 `;
 
 const AllJobsBtn = styled(Link)`
@@ -103,6 +113,23 @@ const AllJobsBtn = styled(Link)`
   @media (max-width: 500px) {
     font-size: 18px;
     padding: 0 15px;
+  }
+  @media (max-width: 425px) {
+    font-size: 17px;
+    height: 45px;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: 375px) {
+    font-size: 16px;
+    height: 40px;
+  }
+  @media (max-width: 320px) {
+    span {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -137,6 +164,10 @@ const JobWrapper = styled.div`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: box-shadow 0.3s ease-in-out !important;
   }
+
+  @media (max-width: 320px) {
+    padding: 1.5rem 1rem;
+  }
 `;
 
 const JobIcon = styled.div`
@@ -151,6 +182,14 @@ const JobIcon = styled.div`
   color: black;
   background-color: #f5f5fa;
   border-radius: 50%;
+
+  @media (max-width: 320px) {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 25px;
+  }
 `;
 
 const JobTitle = styled.p`
@@ -166,6 +205,10 @@ const JobDescription = styled.p`
   span {
     margin: 0 7px;
   }
+
+  @media (max-width: 320px) {
+    font-size: 15px;
+  }
 `;
 
 const JobSalary = styled.p`
@@ -178,5 +221,9 @@ const JobSalary = styled.p`
     padding: 6px 12px;
     border-radius: 25px;
     margin-right: 10px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 12px;
   }
 `;

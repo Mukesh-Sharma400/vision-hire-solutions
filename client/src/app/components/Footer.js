@@ -120,7 +120,6 @@ const ColumnsWrapper = styled.div`
   @media (max-width: 1024px) {
     gap: 40px;
   }
-
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -148,6 +147,13 @@ const Logo = styled(Image)`
 const Description = styled.p`
   font-size: 15px;
   color: black;
+
+  @media (max-width: 425px) {
+    font-size: 14px;
+  }
+  @media (max-width: 375px) {
+    font-size: 13px;
+  }
 `;
 
 const SocialLinksWrapper = styled.div`
@@ -233,11 +239,13 @@ const BottomWrapper = styled.div`
   @media (max-width: 768px) {
     font-size: 13px;
   }
-
   @media (max-width: 600px) {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+  }
+  @media (max-width: 320px) {
+    font-size: 11px;
   }
 `;
 

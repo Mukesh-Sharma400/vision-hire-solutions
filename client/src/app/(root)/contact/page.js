@@ -358,7 +358,7 @@ const TextBox = styled.input`
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
 
-  @media (max-width: 426px) {
+  @media (max-width: 425px) {
     font-size: 16px;
   }
 
@@ -379,7 +379,7 @@ const TextArea = styled.textarea`
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
 
-  @media (max-width: 426px) {
+  @media (max-width: 425px) {
     font-size: 16px;
   }
 

@@ -9,8 +9,8 @@ import BaseLayout from "@/app/components/BaseLayout";
 export default function Home() {
   return (
     <BaseLayout>
-      <Hero />
-      <SearchBox />
+      {/* <Hero /> */}
+      {/* <SearchBox /> */}
       <Jobs />
       <Trending />
       <Members />

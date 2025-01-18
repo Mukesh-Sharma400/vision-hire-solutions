@@ -72,6 +72,10 @@ const LeftSide = styled.div`
   background-position: center;
   border-radius: 20px;
   padding: 3rem 2rem;
+
+  @media (max-width: 320px) {
+    padding: 1.5rem 1rem;
+  }
 `;
 
 const SubHeading = styled.p`
@@ -83,6 +87,10 @@ const SubHeading = styled.p`
 const Heading = styled.h3`
   font-size: 35px;
   font-weight: 700;
+
+  @media (max-width: 320px) {
+    font-size: 30px;
+  }
 `;
 
 const Description = styled.p`
@@ -106,6 +114,11 @@ const RightSide = styled.div`
   background-position: center;
   border-radius: 20px;
   padding: 3rem 1.5rem;
+
+  @media (max-width: 375px) {
+    padding: 2rem 1rem;
+    gap: 0.5rem;
+  }
 `;
 
 const Job = styled.p`

@@ -65,6 +65,16 @@ const HeadingWrapper = styled.div`
 const Heading = styled.h3`
   font-size: 25px;
   font-weight: 700;
+
+  @media (max-width: 425px) {
+    font-size: 23px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
+  @media (max-width: 320px) {
+    font-size: 16px;
+  }
 `;
 
 const MeetTeamBtn = styled(Link)`
@@ -97,6 +107,23 @@ const MeetTeamBtn = styled(Link)`
   @media (max-width: 500px) {
     font-size: 18px;
     padding: 0 15px;
+  }
+  @media (max-width: 425px) {
+    font-size: 17px;
+    height: 45px;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: 375px) {
+    font-size: 16px;
+    height: 40px;
+  }
+  @media (max-width: 320px) {
+    span {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -141,12 +168,18 @@ const MemberImage = styled(Image)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
   color: black;
   background-color: #f5f5fa;
   border-radius: 50%;
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+
+  @media (max-width: 320px) {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+  }
 `;
 
 const MemberName = styled.p`
@@ -158,4 +191,8 @@ const MemberName = styled.p`
 const MemberDescription = styled.p`
   color: #8083a3;
   font-size: 17px;
+
+  @media (max-width: 320px) {
+    font-size: 15px;
+  }
 `;

@@ -71,6 +71,10 @@ const Heading = styled.h3`
   font-weight: 700;
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+
+  @media (max-width: 320px) {
+    font-size: 30px;
+  }
 `;
 
 const Description = styled.p`

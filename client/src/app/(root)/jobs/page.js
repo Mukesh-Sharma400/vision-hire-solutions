@@ -218,7 +218,7 @@ const HeaderWrapper = styled.div`
   @media (max-width: 550px) {
     padding: 0 30px;
   }
-  @media (max-width: 426px) {
+  @media (max-width: 425px) {
     padding: 0 20px;
   }
 `;
