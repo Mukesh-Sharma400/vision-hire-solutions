@@ -216,6 +216,16 @@ const ReviewText = styled.p`
   font-size: 30px;
   font-weight: 600;
   font-style: italic;
+
+  @media (max-width: 425px) {
+    font-size: 25px;
+  }
+  @media (max-width: 375px) {
+    font-size: 22px;
+  }
+  @media (max-width: 320px) {
+    font-size: 20px;
+  }
 `;
 
 const ReviewImageNameWrapper = styled.div`
