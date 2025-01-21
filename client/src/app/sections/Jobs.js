@@ -6,25 +6,34 @@ import styled from "styled-components";
 export default function Jobs() {
   const jobs = [
     {
+      id: "1",
       icon: "bi-briefcase",
       title: "Software Engineer",
       location: "Bengaluru, India",
       type: "Full-time",
       salary: "₹12,00,000/year",
+      tags: ["Software Development", "JavaScript", "Node.js"],
+      postedOn: "Jan 5, 2025",
     },
     {
+      id: "2",
       icon: "bi-laptop",
       title: "UI/UX Designer",
       location: "Mumbai, India",
       type: "Part-time",
       salary: "₹6,00,000/year",
+      tags: ["UI Design", "UX Research", "Figma"],
+      postedOn: "Jan 3, 2025",
     },
     {
+      id: "3",
       icon: "bi-building",
       title: "Product Manager",
       location: "Hyderabad, India",
       type: "Remote",
       salary: "₹15,00,000/year",
+      tags: ["Product Management", "Agile", "Scrum"],
+      postedOn: "Jan 2, 2025",
     },
   ];
 
