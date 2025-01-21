@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import SearchBox from "@/app/components/SearchBox";
@@ -14,6 +15,7 @@ export default function JobsPage() {
 
   const jobs = [
     {
+      id: "1",
       icon: "bi-briefcase",
       title: "Software Engineer",
       location: "Bengaluru, India",
@@ -23,6 +25,7 @@ export default function JobsPage() {
       postedOn: "Jan 5, 2025",
     },
     {
+      id: "2",
       icon: "bi-laptop",
       title: "UI/UX Designer",
       location: "Mumbai, India",
@@ -32,6 +35,7 @@ export default function JobsPage() {
       postedOn: "Jan 3, 2025",
     },
     {
+      id: "3",
       icon: "bi-building",
       title: "Product Manager",
       location: "Hyderabad, India",
@@ -41,6 +45,7 @@ export default function JobsPage() {
       postedOn: "Jan 2, 2025",
     },
     {
+      id: "4",
       icon: "bi-pc-display-horizontal",
       title: "Data Analyst",
       location: "Delhi, India",
@@ -50,6 +55,7 @@ export default function JobsPage() {
       postedOn: "Dec 29, 2024",
     },
     {
+      id: "5",
       icon: "bi-server",
       title: "DevOps Engineer",
       location: "Pune, India",
@@ -59,6 +65,7 @@ export default function JobsPage() {
       postedOn: "Jan 4, 2025",
     },
     {
+      id: "6",
       icon: "bi-phone",
       title: "Mobile App Developer",
       location: "Chennai, India",
@@ -68,6 +75,7 @@ export default function JobsPage() {
       postedOn: "Jan 6, 2025",
     },
     {
+      id: "7",
       icon: "bi-terminal",
       title: "Frontend Developer",
       location: "Kolkata, India",
@@ -77,6 +85,7 @@ export default function JobsPage() {
       postedOn: "Jan 1, 2025",
     },
     {
+      id: "8",
       icon: "bi-cloud",
       title: "Cloud Engineer",
       location: "Ahmedabad, India",
@@ -86,6 +95,7 @@ export default function JobsPage() {
       postedOn: "Dec 31, 2024",
     },
     {
+      id: "9",
       icon: "bi-key",
       title: "Cybersecurity Analyst",
       location: "Noida, India",
@@ -95,6 +105,7 @@ export default function JobsPage() {
       postedOn: "Dec 28, 2024",
     },
     {
+      id: "10",
       icon: "bi-file-text",
       title: "Technical Writer",
       location: "Jaipur, India",
@@ -120,8 +131,7 @@ export default function JobsPage() {
         <HeaderWrapper>
           <Heading data-aos="fade-up">Finding a job</Heading>
           <Description data-aos="fade-up" data-aos-delay="100">
-            When you’re searching for a job, there are a few things you can do
-            to get the most out of your search
+            Your guide to a smarter, faster job search.
           </Description>
         </HeaderWrapper>
         <SearchBox />
@@ -156,7 +166,7 @@ export default function JobsPage() {
             </MoreFilter>
           </FiltersWrapper>
           {jobs.map((job, index) => (
-            <JobWrapper key={index} data-aos="fade-up">
+            <JobWrapper key={index} data-aos="fade-up" href={`/job/${job.id}`}>
               <JobIcon>
                 <i className={job.icon}></i>
               </JobIcon>
@@ -332,7 +342,7 @@ const JobsWrapper = styled.div`
   }
 `;
 
-const JobWrapper = styled.div`
+const JobWrapper = styled(Link)`
   width: 100%;
   height: 100%;
   display: flex;

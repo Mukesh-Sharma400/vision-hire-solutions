@@ -34,8 +34,7 @@ export default function AboutPage() {
         <HeaderWrapper>
           <Heading data-aos="fade-up">About Us</Heading>
           <Description data-aos="fade-up" data-aos-delay="100">
-            When you’re searching for a job, there are a few things you can do
-            to get the most out of your search
+            Learn more about who we are and what drives us.
           </Description>
         </HeaderWrapper>
         <MissionValueIntroWrapper>
@@ -43,31 +42,32 @@ export default function AboutPage() {
             <MissionValueCard data-aos="fade-up">
               <MissionValueHeading>Our missions</MissionValueHeading>
               <MissionValueDescription>
-                Certain things catch your eye, but pursue only those that
-                capture the heart. We become what we think about. The person who
-                says it cannot be done should
+                Our mission is to inspire meaningful pursuits that connect with
+                the heart and mind. We strive to turn dreams into reality
+                through innovation, dedication, and purpose-driven action.
               </MissionValueDescription>
             </MissionValueCard>
             <MissionValueCard data-aos="fade-up">
               <MissionValueHeading>Our values</MissionValueHeading>
               <MissionValueDescription>
-                Certain things catch your eye, but pursue only those that
-                capture the heart. We become what we think about. The person who
-                says it cannot be done should
+                We value perseverance, integrity, and the power of ideas to
+                create change. Our focus is on excellence, collaboration, and
+                fostering meaningful connections.
               </MissionValueDescription>
             </MissionValueCard>
           </MissionValueWrapper>
           <ReviewCard data-aos="fade-up">
             <ReviewText>
               ❝ I needed a change, to be able to make more money and have a life
-              outside my job. Work App helped me discover something better. ❞
+              outside my job. Vision Hire Solutions helped me discover something
+              better. ❞
             </ReviewText>
             <ReviewImageNameWrapper>
               <ReviewImage src={person1} alt="person1" quality={100} />
               <ReviewNameWrapper>
-                <ReviewerName>Naseema Al Morad</ReviewerName>
+                <ReviewerName>Ravi Kumar</ReviewerName>
                 <ReviewerDescription>
-                  Developer at Dropbox Inc.
+                  Software Developer at Infosys Ltd.
                 </ReviewerDescription>
               </ReviewNameWrapper>
             </ReviewImageNameWrapper>
@@ -76,9 +76,7 @@ export default function AboutPage() {
         <HeaderWrapper id="members">
           <ShortHeading data-aos="fade-up">Meet the team</ShortHeading>
           <ShortDescription data-aos="fade-up" data-aos-delay="100">
-            Workze is an independent branding and experience design agency with
-            a great variety of services, such as branding, marketing, and web
-            design.
+            Get to know the people driving our vision forward.
           </ShortDescription>
         </HeaderWrapper>
         <MembersWrapper>
@@ -148,6 +146,7 @@ const Heading = styled.h1`
 const Description = styled.p`
   max-width: 600px;
   font-size: 18px;
+  color: #8083a3;
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
@@ -213,7 +212,7 @@ const ReviewCard = styled.div`
 `;
 
 const ReviewText = styled.p`
-  font-size: 30px;
+  font-size: 29px;
   font-weight: 600;
   font-style: italic;
 

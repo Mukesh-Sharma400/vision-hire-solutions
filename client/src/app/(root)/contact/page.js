@@ -59,20 +59,19 @@ export default function ContactPage() {
             <HeadingWrapper>
               <Heading data-aos="fade-up">Contact Us</Heading>
               <Description data-aos="fade-up" data-aos-delay="100">
-                Become our team member, apply for the job post today and send us
-                your detailed CV.
+                We’re here to help—get in touch with us today.
               </Description>
             </HeadingWrapper>
             <AddressCard data-aos="fade-up">
               <AddressHeading>Headquarter office</AddressHeading>
               <AddressDescription>
-                Storkower Strasse 41
+                Plot No. 12/13,
                 <br />
-                Rheinland-Pfalz
+                Sector 5,
                 <br />
-                56379
+                Ghansoli,
                 <br />
-                Germany, Berlin
+                Navi Mumbai, Maharashtra.
               </AddressDescription>
               <FlagImage src={flag} alt="India" quality={100} />
             </AddressCard>
@@ -216,6 +215,8 @@ const Heading = styled.h2`
   line-height: 60px;
   font-weight: 900;
   letter-spacing: 1px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   @media (max-width: 500px) {
     font-size: 50px;
@@ -229,6 +230,8 @@ const Description = styled.p`
   font-size: 15px;
   text-align: center;
   color: #8083a3;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   @media (max-width: 500px) {
     font-size: 13px;
